@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title><%=title%></title>
+</head>
+<style>
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<center>
+  <div>
+  <% results.forEach(function(element) { %>
+<table style="width:80%">
+  <tr>
+    <th rowspan="2"style="width:25%" ><img src="<%=element.img%> "alt="image not found" width="300" height="400">
+
+   </th>
+    <td style="height:25%" style="font-size:60px;"><h1><%=element.name%></h1></td>
+  </tr>
+  <tr>
+    <td><h3 align="justify"><%=element.summary%></h3></td>
+  </tr>
+</table>
+<br>
+<%});%>
+</div>
+</center>
+
+
+</body>
+</html>
